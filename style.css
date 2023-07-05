@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+/* body {
+  background-image: url(image/capibarafondo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 95px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #010101;
+  padding: 10px;
+}
+
+.navbar-logo {
+  padding-left: 30px;
+}
+.navbar-logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar-center {
+  flex-grow: 0.5;
+  text-align: center;
+  font-weight: bold;
+}
+.navbar-center a {
+  color: aliceblue;
+}
+
+.navbar-center ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-right a {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.carritoCompras {
+  font-size: 35px;
+  padding: 1rem;
+  color: aliceblue;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.carritoCompras span {
+  position: absolute;
+  top: -1px;
+  right: 22px;
+  background-color: red;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+}
+
+.sideBar {
+  width: 500px;
+  height: calc(100vh - 95px);
+  background-color: aliceblue;
+  position: absolute;
+  right: 0;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+.section {
+  text-align: center;
+  padding: 20px;
+  padding-top: 95px;
+}
+
+.firstsection-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.firstsection-image {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.firstsection-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.firstsection-text {
+  margin-left: 20px;
+  width: 300px;
+  padding-bottom: 50px;
+}
+
+.firstsection-text p {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(
+    249,
+    246,
+    246,
+    0.445
+  ); /* Color de fondo con transparencia */
+  padding: 10px; /* Añade un poco de espacio alrededor del párrafo */
+}
+
+.img-firstsection {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  color: aliceblue;
+  background-color: #060606;
+  border: 1px solid #303030;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 250px;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
