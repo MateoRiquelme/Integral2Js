@@ -1,0 +1,45 @@
+@media (max-width: 725px) {
+  .menu-hamburguesa {
+    margin: auto;
+    display: block;
+  }
+
+  .icon-menu {
+    display: block;
+  }
+
+  .navbar-center {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .filtro {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .filtro ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filtroItem {
+    width: 100%;
+  }
+
+  .firstsection-content {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 100%;
+  }
+
+  .productoSeleccionadoAlCarrito {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}

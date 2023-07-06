@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <title>Registro capibara</title>
+  </head>
+  <body>
+    <form class="registerForm">
+      <div class="background">
+        <h2 class="titulo">Register</h2>
+        <div class="form-group">
+          <div class="form">
+            <label for="Name and Surname">Nombre y apellido</label>
+            <input
+              type="text"
+              id="nameAndSurname"
+              name="name and surname"
+              required
+            />
+          </div>
+          <div class="form">
+            <label for="age">Edad</label>
+            <input type="number" id="age" name="age" min="16" required />
+          </div>
+          <div class="form">
+            <label for="new-username">Nombre de usuario:</label>
+            <input type="text" id="new-username" name="new-username" required />
+          </div>
+          <div class="form">
+            <label for="new-password">Contraseña:</label>
+            <input
+              type="password"
+              id="new-password"
+              name="new-password"
+              required
+            />
+          </div>
+          <input type="submit" value="Register" />
+        </div>
+        <div class="enlaces">
+          <a href="./index.html">Volver al Home</a>
+          <a href="./login.html">¿Ya tienes una cuenta? iniciar sesion</a>
+        </div>
+      </div>
+    </form>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

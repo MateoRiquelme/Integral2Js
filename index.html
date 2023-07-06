@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
     <title>IntegralJS</title>
   </head>
   <body>
@@ -14,28 +15,39 @@
         </div>
         <div class="navbar-center">
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Destacados</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="">Inicio</a></li>
+            <li><a href="#cartas-container">Productos</a></li>
+            <li><a href="#footer">Contacto</a></li>
+            <li><a href="#about-us">About Us</a></li>
+          </ul>
+        </div>
+        <div class="menu-hamburguesa">
+          <ul id="listbox">
+            <li><a href="">Inicio</a></li>
+            <li><a href="#cartas-container">Productos</a></li>
+            <li><a href="#footer">Contacto</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <a href="./login.html">Login</a>
+            <a href="./register.html">Register</a>
           </ul>
         </div>
         <div class="navbar-right">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
+          <a href="./login.html">Login</a>
+          <a href="./register.html">Register</a>
         </div>
+        <button class="icon-menu">☰</button>
         <button id="btnCarritoCompras" class="carritoCompras">
-         <span id="badge" style="display: none;"></span>
+          <span id="badge" style="display: none"></span>
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </nav>
-      <div id="sideBar" class="sideBar" style="display: none;"></div>
+      <div id="sideBar" class="sideBar" style="display: none"></div>
     </header>
 
     <!-- ----------------------------------------------------------
     ---------------------------------------------------------- -->
-    <section class="section">
-      <h2 class="firstsection-title">Título de la sección</h2>
+    <section id="about-us" class="section">
+      <h2 class="firstsection-title">La Galería Capibara Exclusiva</h2>
       <div class="firstsection-content">
         <div class="img-firstsection">
           <img class="firstsection-image" src="image/carpinchoMain.jfif" />
@@ -55,55 +67,61 @@
     </section>
     <!-- ----------------------------------------------------------
     ---------------------------------------------------------- -->
-    <section>
-      <h1>Sección de Cartas</h1>
+    <section class="section-cards">
+      <h1 class="titulo-cards-section">Sección de Cartas</h1>
 
-      <div>
-        <label for="filtro-precio">Filtrar por precio:</label>
-        <select id="filtro-precio" onchange="filtrarCartas()">
-          <option value="">Ninguno</option>
-          <option value="mayor-menor">Precio: Mayor a menor</option>
-          <option value="menor-mayor">Precio: Menor a mayor</option>
-        </select>
+      <div class="filtro">
+        <ul>
+          <li class="filtroItem">todos</li>
+          <li class="filtroItem">comun</li>
+          <li class="filtroItem">poco comun</li>
+          <li class="filtroItem">raro</li>
+          <li class="filtroItem">epico</li>
+          <li class="filtroItem">legendario</li>
+          <li class="filtroItem">mitico</li>
+        </ul>
       </div>
 
-      <div>
-        <label for="filtro-rareza">Filtrar por rareza:</label>
-        <select id="filtro-rareza" onchange="filtrarCartas()">
-          <option value="">Ninguno</option>
-          <option value="mayor-menor">Rareza: Mayor a menor</option>
-          <option value="menor-mayor">Rareza: Menor a mayor</option>
-        </select>
-      </div>
-
-      <div id="cartas-container" class="cards-container">  
-      </div> 
+      <div id="cartas-container" class="cards-container"></div>
       <!-- Aqui yace el renderizado de cards -->
+    </section>
 
+    <footer id="footer">
+      <p>Contactanos: 3740651980</p>
+      <p>
+        Para mas Informacion:
+        <a href="mailto:ParaisoCapibara@gmail.com">ParaisoCapibara@gmail.com</a>
+      </p>
+      <p class="texto-footer">
+        &copy; 2023 Tu Empresa. Todos los derechos reservados. |
+        <span class="footer-link">Política de privacidad</span> |
+        <span class="footer-link">Términos y condiciones</span>
+      </p>
+    </footer>
 
-      <div id="cart"></div>
+    <template id="paintCard">
+      <div class="card">
+        <img id="templateImg" />
+        <h3 id="templateProducto"></h3>
+        <p id="templatePrecio"></p>
+        <button id="templateButton" class="btn">comprar</button>
+      </div>
+    </template>
 
+    <template id="productoDentroCarrito">
+      <div class="productoSeleccionadoAlCarrito">
+        <img src="" class="templateAñadidoCarritoImg" width="100px" />
+        <h3 class="templateAñadidoCarritoProducto"></h3>
+        <span class="templateCantidadCarrito"></span>
+        <p class="templateAñadidoCarritoPrecio"></p>
+        <button class="borrarCarrito">Borrar</button>
+      </div>
+    </template>
 
-
-<template id="paintCard"> 
-  <div class="card">
-    <img id="templateImg"/>
-    <h3 id="templateProducto"></h3>
-    <p id="templatePrecio"></p>
-    <button id="templateButton" class="btn"> comprar </button>
-  </div>
-</template>
-
-<template id="productoDentroCarrito">
-  <div class="productoSeleccionadoAlCarrito">
-    <img class="templateAñadidoCarritoImg"/>
-    <h3 class="templateAñadidoCarritoProducto"></h3>
-    <p class="templateAñadidoCarritoPrecio"></p>
-  </div>
-</template>
-
-
-      <script src="js/index.js" type="module"></script>
-      <script src="https://kit.fontawesome.com/e2c4bbb247.js" crossorigin="anonymous"></script>
+    <script src="js/index.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/e2c4bbb247.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
