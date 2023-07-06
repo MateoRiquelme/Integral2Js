@@ -13,6 +13,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -195,7 +199,7 @@ ul li a:hover {
 
 .productoSeleccionadoAlCarrito {
   width: 90%;
-  margin: 0 auto;
+  margin: 1rem auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
